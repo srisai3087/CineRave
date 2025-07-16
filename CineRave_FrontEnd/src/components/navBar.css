@@ -1,0 +1,130 @@
+/* Base styles for NavBar */
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.8rem;
+}
+
+.main-title {
+  margin-left: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ffcc00, #8a2be2);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 20px rgba(255, 126, 95, 0.8);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.right ul {
+  display: flex;
+  gap: 3rem;
+  margin-right: 5rem;
+  text-align: center;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+  font-size: 20px;
+  color: white;
+}
+
+.link,
+.link-about {
+  text-decoration: none;
+}
+
+.auth {
+  padding: 10px 12px;
+  background: linear-gradient(90deg, #e6b800, #6b1ab8);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.auth:hover {
+  background: linear-gradient(90deg, #6b1ab8, #e6b800);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .right ul {
+    display: none;
+    flex-direction: column;
+    gap: 0rem;
+    margin-right: 0;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: left;
+    z-index: 2;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 3;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .main-title {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .right ul {
+    gap: 0.4rem;
+    margin-right: 0;
+    right: 0;
+  }
+
+  .right li {
+    font-size: 0.8rem;
+  }
+
+  .auth {
+    padding: 5px 5px;
+    font-size: 0.6rem;
+  }
+}

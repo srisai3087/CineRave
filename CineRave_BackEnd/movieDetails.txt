@@ -1,0 +1,32 @@
+custom example json file to store in database
+
+{
+  "title": "Lucky Baskhar",
+  "director": "Venky Atluri",
+  "poster": "link",
+  "genere": [
+    "SC-Fi",
+    "Fantacy"
+  ],
+  "rating": 9,
+  "description": "some description",
+  "trailer": "link",
+  "runTime": 176,
+  "releaseDate": "2024-09-09",
+  "language": [
+    "Telugu",
+    "English"
+  ],
+  "reviews": [
+    {
+      "userName": "santosh",
+      "comment": "So much good",
+      "rating": 8
+    },
+    {
+      "userName": "Subbu",
+      "comment": "impressive",
+      "rating": 9
+    }
+  ]
+}
