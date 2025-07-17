@@ -236,6 +236,7 @@ app.post('/users/register', async (req, res) => {
 app.post('/users/login', async (req, res) => {
   try {
     const { email, password } = req.body;
+    console.log(email,password)
 
     if (!email || !password) {
       res.status(400).json({
